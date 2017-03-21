@@ -429,6 +429,23 @@ of the JobManager, because the same ActorSystem is used. Its not possible to use
 
   For example when running Flink on YARN on an environment with a restrictive firewall, this option allows specifying a range of allowed ports.
 
+- `yarn.tags` A comma-separated list of tags to apply to the Flink YARN application.
+
+### Mesos
+
+
+- `mesos.initial-tasks`: The initial workers to bring up when the master starts (**DEFAULT**: The number of workers specified at cluster startup).
+
+- `mesos.constraints.hard.hostattribute`: Constraints for task placement on mesos (**DEFAULT**: None).
+
+- `mesos.maximum-failed-tasks`: The maximum number of failed workers before the cluster fails (**DEFAULT**: Number of initial workers).
+May be set to -1 to disable this feature.
+
+- `mesos.master`: The Mesos master URL. The value should be in one of the following forms:
+  * `host:port`
+  * `zk://host1:port1,host2:port2,.../path`
+  * `zk://username:password@host1:port1,host2:port2,.../path`
+  * `file:///path/to/file`
 
 ## High Availability (HA)
 

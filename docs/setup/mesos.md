@@ -184,9 +184,10 @@ Here is an example configuration for Marathon:
 
 #### Mesos configuration entries
 
-
 `mesos.initial-tasks`: The initial workers to bring up when the master
     starts (**DEFAULT**: The number of workers specified at cluster startup).
+
+`mesos.constraints.hard.hostattribute`: Constraints for task placement on mesos (**DEFAULT**: None).
 
 `mesos.maximum-failed-tasks`: The maximum number of failed workers before
     the cluster fails (**DEFAULT**: Number of initial workers) May be set to -1
